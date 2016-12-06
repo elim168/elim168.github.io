@@ -1,0 +1,1584 @@
+
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"标题 1 Char";
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Calibri","sans-serif";}
+h2
+	{mso-style-link:"标题 2 Char";
+	margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"文档结构图 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-link:"标题 1";
+	font-weight:bold;}
+span.2Char
+	{mso-style-name:"标题 2 Char";
+	mso-style-link:"标题 2";
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"文档结构图 Char";
+	mso-style-link:文档结构图;
+	font-family:宋体;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>简介</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java</span><span
+style='font-family:宋体'>的枚举类型用于在某些东西可以枚举出来的时候，我们可以把它定义为枚举类型，然后把其中包含的可选值一一枚举。打个比方，我们现在有一堆数字，大致可以分为四种类型，整型、浮点型、金额和百分比。整型的我就需要按整型显示，如果是浮点型则要求保留两位小数，如果是金额则要求按千分位展示，如果是百分比则要求显示对应的百分比。为此我们就定义了一个枚举类型</span><span
+lang=EN-US>NumberType</span><span style='font-family:宋体'>，其一共四个枚举值，每个枚举值之间用逗号分隔，最后一个枚举值用分号结束（也可以不用，但是如果最后一个值后面还有其它内容时必须用分号结束）。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>enum</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>, </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>, </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>, </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>对于这样的需求可能你觉得没必要使用枚举类型，我使用一个常量类，里面定义</span><span
+lang=EN-US>4</span><span style='font-family:宋体'>个常量也是可以的，如下这样。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>class</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberTypes {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>static</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>final</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = 1;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>static</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>final</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = 2;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>static</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>final</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = 3;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>static</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>final</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = 4;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>对的，定义一个常量类也可以达到对应的效果，但是在使用枚举类的时候将更加的方便。例如我们的类型是安全的，当你使用枚举类型时你传递的只能是对应的枚举类型里面包含的枚举元素，而你使用常量时你传递的类型只能是一个</span><span
+lang=EN-US>Integer</span><span style='font-family:宋体'>，但是调用者完全有可能传入一个你没有定义的</span><span
+lang=EN-US>Integer</span><span style='font-family:宋体'>。下面还会介绍一些枚举的功能，通过下面的介绍你就会觉得很多时候用枚举比用一个常量类功能更加的强大。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>成员变量</span><span lang=EN-US>/</span><span
+style='font-family:宋体'>构造方法</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>枚举类型跟</span><span lang=EN-US>interface</span><span
+style='font-family:宋体'>一样，也是</span><span lang=EN-US>Java</span><span
+style='font-family:宋体'>类的一种，只是比较特殊的一种</span><span lang=EN-US>Java</span><span
+style='font-family:宋体'>类。其也可以定义自己的成员变量、构造方法等。非枚举值必须定义在枚举值之后。如下，我们定义了一个成员变量</span><span
+lang=EN-US>code</span><span style='font-family:宋体'>，和一个基于成员变量</span><span
+lang=EN-US>code</span><span style='font-family:宋体'>的构造方法，我们的构造方法必须是</span><span
+lang=EN-US>private</span><span style='font-family:宋体'>的，因为它是不能通过外部调用的。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>enum</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(1), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(2), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(3),</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>成员变量，内部编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><u><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span></u><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>构造方法</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> code</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType(</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F0055'>int</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> </span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span style='font-family:宋体'>对于枚举类型而言，其中定义的每一个枚举值就相当于对应枚举类型的一个具体对象，其在构造的时候必须利用对应枚举类型的一个构造方法来初始化。在上面的示例中我们只定义了一个构造方法，所以我们的每一个枚举值在构造的时候都只能通过传递</span><span
+lang=EN-US>code</span><span style='font-family:宋体'>的方式来初始化。枚举类型的构造方法也是可以有多个的，如上面的示例中我们还可以给它加一个无参构造方法和其它构造方法。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>成员方法</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>枚举类型也可以定义自己的成员方法，其可以是</span><span lang=EN-US>public</span><span
+style='font-family:宋体'>的，也可以是</span><span lang=EN-US>private</span><span
+style='font-family:宋体'>的等。如下，我们定义了一个公用的</span><span lang=EN-US>getCode()</span><span
+style='font-family:宋体'>方法，其在方法体里面返回了成员变量</span><span lang=EN-US>code</span><span
+style='font-family:宋体'>。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>enum</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> <span
+style='background:silver'>NumberType</span> {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(1), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(2), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(3),</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>成员变量，内部编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>无参构造，没意义</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType() {}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>构造方法</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> code</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType(</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F0055'>int</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> </span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>获取对应的编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@return</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> getCode()
+{</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>除了这种非抽象方法之外，枚举也可以定义抽象方法，抽象方法则要求每一个枚举值都必须实现。如下，当我们有一个需求就是根据不同类型的枚举值把对应的数据展示为不同的形式时我们就可以定义一个对应的</span><span
+lang=EN-US>show</span><span style='font-family:宋体'>抽象方法，然后由各个枚举值根据自身的需求实现。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>enum</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(1) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#646464'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> String
+show(Object </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F7F5F'>只返回整型部分，去掉小数之类的</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; },
+</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(2) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#646464'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> String
+show(Object </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F7F5F'>必须保留两位小数</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; },
+</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(3) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#646464'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> String
+show(Object </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F7F5F'>必须展示千分位</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; },</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#646464'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> String
+show(Object </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>//</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F7F5F'>必须展示成百分比的形式，</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>0.15</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F7F5F'>变成</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F7F5F'>15%</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; };</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>成员变量，内部编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>无参构造，没意义</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType() {}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>构造方法</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> code</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType(</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F0055'>int</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> </span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>获取对应的编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@return</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> getCode()
+{</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>按照特定的形式展示数据</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> value</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@return</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>abstract</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> String
+show(Object </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>自带的成员方法</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>所有的枚举类型定义实际上都是隐式的继承了</span><span lang=EN-US>java.lang.Enum</span><span
+style='font-family:宋体'>类作为自己的基类型的。</span><span lang=EN-US>Enum</span><span
+style='font-family:宋体'>类型中主要定义了三个公用的成员方法。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>name()</span><span style='font-family:宋体'>：返回对应的元素名称。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>ordinal()</span><span style='font-family:宋体'>：返回对应的元素在枚举类型中定义的顺序号，第一个元素的顺序号是</span><span
+lang=EN-US>0</span><span style='font-family:宋体'>。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>compareTo()</span><span style='font-family:宋体'>：用来比较两个枚举类型对象，其返回结果是调用两个对象的</span><span
+lang=EN-US>ordinal()</span><span style='font-family:宋体'>返回值进行相减。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>静态方法</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>枚举类型也可以包含静态方法，如下示例中我们就定义了一个枚举类型</span><span lang=EN-US>NumberType</span><span
+style='font-family:宋体'>的静态方法，</span><span lang=EN-US>get</span><span
+style='font-family:宋体'>方法，通过</span><span lang=EN-US>NumberType</span><span
+style='font-family:宋体'>的</span><span lang=EN-US>code</span><span
+style='font-family:宋体'>来获取对应的</span><span lang=EN-US>NumberType</span><span
+style='font-family:宋体'>。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>enum</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>整型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(1), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>浮点型</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(2), </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>金额</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(3),</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>百分比</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>(4);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>成员变量，内部编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>无参构造，没意义</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType() {}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>构造方法</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> code</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>private</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType(</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F0055'>int</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> </span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> = </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>获取对应的编码</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@return</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>int</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> getCode()
+{</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>this</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>code</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>/**</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><span style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>通过</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>code</span><span
+style='font-size:14.0pt;font-family:宋体;color:#3F5FBF'>来获取对应的</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>NumberType</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@param</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#3F5FBF'> code</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*
+</span><b><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#7F9FBF'>@return</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#3F5FBF'>&nbsp;&nbsp; &nbsp;*/</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>static</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+NumberType get(</span><b><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:#7F0055'>int</span></b><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> </span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:#6A3E3E'>code</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NumberType[]
+</span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>values</span><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> = NumberType.<i>values</i>();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>for</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+(NumberType </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>value</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'> : </span><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:#6A3E3E'>values</span><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>if</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> (</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>value</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.getCode()
+== </span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>code</span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>value</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>return</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>null</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span style='font-family:宋体'>自带的静态方法</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>上一个示例中我们自己定义了枚举类型</span><span lang=EN-US>NumberType</span><span
+style='font-family:宋体'>的静态方法，</span><span lang=EN-US>get</span><span
+style='font-family:宋体'>方法。而实际上，在</span><span lang=EN-US>Java</span><span
+style='font-family:宋体'>中所有的枚举类型都会自带三个静态方法。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>values()</span><span style='font-family:宋体'>：获取当前枚举类型里面所有的元素，如上面示例中我们</span><span
+lang=EN-US>get</span><span style='font-family:宋体'>静态方法的应用。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>valueOf(String name)</span><span
+style='font-family:宋体'>：根据元素的名称来获取当前枚举类型里面的元素。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>valueOf(Class&lt;T&gt; enumType, String name)</span><span
+style='font-family:宋体'>：根据元素名称来获取指定枚举类型里面的某个元素。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>switch</span><span style='font-family:宋体'>枚举类型</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>我们在使用枚举类型的时候如果要具体用到某个元素，我们都是通过“</span><span lang=EN-US>enum.ele</span><span
+style='font-family:宋体'>”的形式来获取具体的某个元素应用的，如我们需要使用枚举类型</span><span lang=EN-US>NumberType</span><span
+style='font-family:宋体'>的</span><span lang=EN-US>CURRENCY</span><span
+style='font-family:宋体'>元素时，我们会使用</span><span lang=EN-US>NumberType.CURRENCY</span><span
+style='font-family:宋体'>的形式来使用。但是在使用</span><span lang=EN-US>switch</span><span
+style='font-family:宋体'>语句对枚举类型进行逻辑处理的时候，我们就不能再加上对应的枚举类型前缀了，而是需要直接使用对应的元素。如我们需要在</span><span
+lang=EN-US>switch</span><span style='font-family:宋体'>语句中使用上述的</span><span
+lang=EN-US>NumberType</span><span style='font-family:宋体'>时，我们应该以如下的方式来使用。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>public</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>void</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>
+doSwitch(NumberType </span><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:#6A3E3E'>numberType</span><span lang=EN-US style='font-size:
+14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>switch</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> (</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#6A3E3E'>numberType</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>case</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>INTEGER</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.</span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>out</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.println(</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+style='font-size:14.0pt;font-family:宋体;color:#2A00FF'>整型</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>break</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>case</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>FLOAT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.</span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>out</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.println(</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+style='font-size:14.0pt;font-family:宋体;color:#2A00FF'>浮点型</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>break</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>case</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.</span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>out</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.println(</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+style='font-size:14.0pt;font-family:宋体;color:#2A00FF'>金额</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>break</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>case</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'> </span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>PERCENT</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.</span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>out</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>.println(</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+style='font-size:14.0pt;font-family:宋体;color:#2A00FF'>百分比</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#2A00FF'>&quot;</span><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#7F0055'>break</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:black'>&nbsp;&nbsp; }</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>EnumMap</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>有的时候我们可能需要把我们的枚举类型作为一个</span><span lang=EN-US>Map</span><span
+style='font-family:宋体'>的</span><span lang=EN-US>Key</span><span
+style='font-family:宋体'>来使用，这种情况的话官方建议我们直接使用</span><span lang=EN-US>EnumMap</span><span
+style='font-family:宋体'>。</span><span lang=EN-US>EnumMap</span><span
+style='font-family:宋体'>是</span><span lang=EN-US>Java</span><span
+style='font-family:宋体'>专门为以枚举类型作为</span><span lang=EN-US>Key</span><span
+style='font-family:宋体'>来构造的一个</span><span lang=EN-US>Map</span><span
+style='font-family:宋体'>，其底层的元素是以数组的方式来存储的。这也比较好理解，因为枚举类型的元素一般不会很多，就算很多的话它的</span><span
+lang=EN-US>key</span><span style='font-family:宋体'>也是固定的，所以</span><span
+lang=EN-US>EnumMap</span><span style='font-family:宋体'>在初始化的时候就有一个数组与之对应了，数组的长度就是对应枚举类型的元素个数。</span><span
+lang=EN-US>EnumMap</span><span style='font-family:宋体'>中对应的</span><span
+lang=EN-US>Key</span><span style='font-family:宋体'>的值存储的就是存储在数组中索引为枚举类型元素的</span><span
+lang=EN-US>ordinal()</span><span style='font-family:宋体'>的位置。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>EnumSet</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:宋体'>有的时候我们可能需要把我们的枚举类型对象存入到</span><span lang=EN-US>Set</span><span
+style='font-family:宋体'>中，这种情况的话官方建议我们直接使用</span><span lang=EN-US>EnumSet</span><span
+style='font-family:宋体'>。</span><span lang=EN-US>EnumSet</span><span
+style='font-family:宋体'>在使用的时候不能直接</span><span lang=EN-US>new</span><span
+style='font-family:宋体'>，它提供了一系列的静态</span><span lang=EN-US>of</span><span
+style='font-family:宋体'>方法，用以基于某类型的枚举的某些元素来创建一个</span><span lang=EN-US>EnumSet</span><span
+style='font-family:宋体'>，其返回结果都是一个</span><span lang=EN-US>EnumSet</span><span
+style='font-family:宋体'>对象。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp; EnumSet&lt;NumberType&gt;
+</span><span lang=EN-US style='font-size:14.0pt;font-family:Consolas;
+color:#6A3E3E'>enumSet</span><span lang=EN-US style='font-size:14.0pt;
+font-family:Consolas;color:black'> = EnumSet.<i>of</i>(NumberType.</span><b><i><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:#0000C0'>CURRENCY</span></i></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Consolas;color:black'>,
+NumberType.</span><b><i><span lang=EN-US style='font-size:14.0pt;font-family:
+Consolas;color:#0000C0'>PERCENT</span></i></b><span lang=EN-US
+style='font-size:14.0pt;font-family:Consolas;color:black'>);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
