@@ -1,5 +1,5 @@
-#基于正则表达式的Pointcut
-##JdkRegexpMethodPointcut
+# 基于正则表达式的Pointcut
+## JdkRegexpMethodPointcut
 Spring官方为我们提供了一个基于正则表达式来匹配方法名的Pointcut，`JdkRegexpMethodPointcut`。该Pointcut是继承自`StaticMethodMatcherPointcut`的。我们在定义`JdkRegexpMethodPointcut`时可以通过`patterns`和`excludedPatterns`来注入需要满足和排除的正则表达式，它们对应的都是一个`String[]`。比如我们想匹配所有的方法名以`find`开头的方法，我们可以如下定义：
 ```xml
 	<bean id="regexPointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
@@ -30,7 +30,7 @@ Spring官方为我们提供了一个基于正则表达式来匹配方法名的Po
 ```  
 >需要说明的是在上面的匹配逻辑中传递的参数signatureString是对应方法的全路径名称，即包含该方法的类的全路径及该方法的名称，如“org.springframework.aop.support.JdkRegexpMethodPointcut.matches”这种，所以如果我们需要在使用正则表达式定义Pointcut时，也可以匹配某某类的某某方法这种形式。  
 
-##RegexpMethodPointcutAdvisor
+## RegexpMethodPointcutAdvisor
 使用了`JdkRegexpMethodPointcut`后，我们在使用的时候通常会进行如下配置。  
 ```xml
  	<aop:config>

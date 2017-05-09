@@ -1,4 +1,4 @@
-#编程式的Pointcut	
+# 编程式的Pointcut	
 除了可以通过注解和Xml配置定义Pointcut之外，其实我们还可以通过程序来定义`Pointcut`。Spring Aop的切入点（Pointcut）对应于它的一个`Pointcut`接口，全称是`org.springframework.aop.Pointcut`。该接口的定义如下：  
 ```java
 public interface Pointcut {
@@ -42,7 +42,7 @@ public interface MethodMatcher {
    
 该接口中一共定义了三个方法，两个matches方法，一个包含方法参数一个不包含。不包含方法参数的matches方法用于判断非运行时的方法匹配，比如只需要匹配方法名、方法参数定义的；包含方法参数值的matches方法用于运行时判断方法是否匹配，应用于需要根据方法传参来判断是否匹配的情况，但是该方法一般会在不包含方法参数的matches方法返回true和isRuntime()方法true的情形下才会调用。isRuntime()方法用于指定该Pointcut是否需要在运行时才能判断对应的方法是否匹配。  
 	
-##自定义Pointcut
+## 自定义Pointcut
 以下是一个自定义Pointcut的代码，其将匹配所有的名称Service结尾的Class对应的名称以find开始的方法调用：  
 ```java
 import java.lang.reflect.Method;
@@ -100,7 +100,7 @@ public class MyCustomPointcut implements Pointcut {
 
 }
 ```   
-	然后我们可以定义该自定义Pointcut对应的bean，再定义一个Advisor将使用该Pointcut。如下示例中我们就指定了将在MyCustomPointcut对应的切入点处采用LogAroundAdvice。  
+然后我们可以定义该自定义Pointcut对应的bean，再定义一个Advisor将使用该Pointcut。如下示例中我们就指定了将在MyCustomPointcut对应的切入点处采用LogAroundAdvice。  
 ```xml
  	<aop:config>
  		<aop:advisor advice-ref="logAroundAdvice" pointcut-ref="myCustomPointcut"/>
@@ -108,7 +108,7 @@ public class MyCustomPointcut implements Pointcut {
 	<bean id="logAroundAdvice" class="com.elim.learn.spring.aop.advice.LogAroundAdvice"/>
 	<bean id="myCustomPointcut" class="com.elim.learn.spring.aop.pointcut.MyCustomPointcut"/>
 ```	   
-##继承自现有的Pointcut
+## 继承自现有的Pointcut
 除了可以完全实现Pointcut接口外，我们还可以直接使用Spring自带的Pointcut。比如基于固定方法的StaticMethodMatcherPointcut。该Pointcut是一个抽象类，在使用该Pointcut时只需要实现一个抽象方法matches(Method method, Class<?> targetClass)，以下是一个继承自StaticMethodMatcherPointcut的示例类定义，该Pointcut将匹配所有Class中定义的方法名以find开头的方法。  
 ```java
 public class FindMethodMatcherPointcut extends StaticMethodMatcherPointcut {
