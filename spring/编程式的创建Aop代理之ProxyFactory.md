@@ -88,8 +88,23 @@ public class MyAdvisor implements PointcutAdvisor {
 上述示例就是一个指定代理对象对应的Advisor的示例。其实一个代理对象可以同时绑定多个Advisor对象，ProxyFactory的addAdvisor()方法可多次被调用，且该方法还有一些重载的方法定义，可以参数Spring的API文档。  
 ## 指定Advice
 我们的第一个示例指定的代理对象绑定的是一个Advice，而第二个示例指定的Advisor，对此你会不会有什么疑问呢？依据我们对Spring Aop的了解，Spring的Aop代理对象绑定的就一定是一个Advisor，而且通常是一个PointcutAdvisor，通过它我们可以知道我们的Advice究竟是要应用到哪个Pointcut（哪个方法调用）？当我们通过ProxyFactory在创建代理对象时绑定的是一个Advice对象时，实际上ProxyFactory内部还是为我们转换为了一个Advisor对象的，只是该Advisor对象对应的Pointcut是一个匹配所有方法调用的Pointcut实例。  
+## 指定是否需要发布代理对象
+在调用Aop代理对象的方法时，默认情况下我们是不能访问到当前的代理对象的，如果我们指定了创建的代理对象需要对外发布代理对象，那么在调用代理对象的方法时Spring会把当前的代理对象存入AopContext中，我们就可以在目标对象的方法中通过AopContext中获取到当前的代理对象了。这是通过exposeProxy属性来指定的，如果我们希望对外发布代理对象，我们可以通过exposeProxy的set方法来指定该属性的值为true。如：
+```java
+	@Test
+	public void testProxyFactory2() {
+		MyService myService = new MyService();
+		ProxyFactory proxyFactory = new ProxyFactory(myService);
+		proxyFactory.setExposeProxy(true);//指定对外发布代理对象，即在目标对象方法中可以通过AopContext.currentProxy()访问当前代理对象。
+		proxyFactory.addAdvisor(new MyAdvisor());
+		proxyFactory.addAdvisor(new MyAdvisor());//多次指定Advisor将同时应用多个Advisor
+		MyService proxy = (MyService) proxyFactory.getProxy();
+		proxy.add();
+	}
+```
   
 除了上述配置信息以外，ProxyFactory其实还可以配置很多其它的信息，更多的配置信息项请参考ProxyFactory的源代码或参考Spring API文档。  
+  
 **参考文档**
 * Spring4.1.0官方文档
 * Spring源代码  
