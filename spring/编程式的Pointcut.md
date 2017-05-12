@@ -120,5 +120,6 @@ public class FindMethodMatcherPointcut extends StaticMethodMatcherPointcut {
 
 }
 ```
-关于更多Spring官方已经提供的其它Pointcut定义请参考Spring的API文档。
->（注：本文是基于Spring4.1.0所写，Elim写于2017年5月8日）
+关于更多Spring官方已经提供的其它Pointcut定义请参考Spring的API文档。  
+
+（注：本文是基于Spring4.1.0所写，Elim写于2017年5月8日）
