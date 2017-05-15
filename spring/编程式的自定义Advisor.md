@@ -1,0 +1,2 @@
+# 编程式的自定义Advisor
+大多数情况下，我们的Aop应用都可以通过Spring的Aop配置来进行（不管是基于注解的，还是基于XML配置的）。Spring Aop的核心就是`Advisor`，而`Advisor`的核心就是`PointcutAdvisor`，另外一种`Advisor`——`IntroductionAdvisor`就用的很少了，个人感觉作用也不大。`Advisor`接口有两个子接口，`PointcutAdvisor`和`IntroductionAdvisor`。这两种`Advisor`之前介绍Spring Aop时已经介绍过了，`@DeclareParents`对应的是后者，其它的都是前者。`PointcutAdvisor`是包含一个`Pointcut`和一个`Advice`的。即通过接入点`Pointcut`来寻找匹配的方法，从而应用对应的`Advice`。对于
