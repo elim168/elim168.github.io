@@ -16,9 +16,9 @@
 ### 注册Mybatis Plugin
 跟其它Mybatis Plugin一样，我们需要在Mybatis的配置文件中注册需要使用的Plugin，`PageHelper`中对应的Plugin实现类就是`com.github.pagehelper.PageHelper`自身。顺便说一句，Mybatis的Plugin我们说是Plugin，实际上对应的却是`org.apache.ibatis.plugin.Interceptor`接口，因为`Interceptor`的核心是其中的`plugin(Object target)`方法，而对于`plugin(Object target)`方法的实现，我们在需要对对应的对象进行拦截时会通过`org.apache.ibatis.plugin.Plugin`的静态方法`wrap(Object target, Interceptor interceptor)`返回一个代理对象，而方法入参就是当前的`Interceptor`实现类。  
 ```xml
-	<plugins>  
-       <plugin interceptor="com.github.pagehelper.PageHelper"/>  
-    </plugins>
+<plugins>  
+   <plugin interceptor="com.github.pagehelper.PageHelper"/>  
+</plugins>
 ```
 
 ### 使用PageHelper
