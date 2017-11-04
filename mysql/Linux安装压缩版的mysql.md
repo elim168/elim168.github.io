@@ -58,7 +58,8 @@ Threads: 1  Questions: 2  Slow queries: 0  Opens: 33  Flush tables: 1  Open tabl
 
 ```
 
-### 8.登录mysql，初始化的mysql的root用户是没有密码的，所以我们可以使用`mysql -u root`进行登录。
+### 8.登录mysql
+初始化的mysql的root用户是没有密码的，所以我们可以使用`mysql -u root`进行登录。
 ```shell
 shell> bin/mysql -u root
 ```
