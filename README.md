@@ -1,2 +1,1 @@
-# elim168.github.io
-documention
+# 记录一些原创总结
