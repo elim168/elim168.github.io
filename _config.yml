@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: 'Elim的博客'
+description: '用来记录一些原创性的总结'
+show_downloads: true
