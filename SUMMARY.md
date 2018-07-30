@@ -29,6 +29,8 @@
     * [27.Spring之util命名空间](spring/bean/27.Spring之util命名空间.md)
     * [28.Spring的task抽象](spring/bean/28.Spring的task抽象.md)
     * [29.Spring整合quartz](spring/bean/29.Spring整合quartz.md)
+    * [30.Spring之RestTemplate介绍](spring/bean/30.Spring之RestTemplate介绍.md)
+    * [31.Spring之WebClient介绍](spring/bean/31.Spring之WebClient介绍.md)
   * aop
     * [1.Aop简介](spring/aop/01.Aop简介.md)
     * [2.基于Aspectj注解的Spring Aop简单实现](spring/aop/02.基于Aspectj注解的Spring Aop简单实现.md)
@@ -71,6 +73,13 @@
     * [5.SpringApplication](spring/boot/05.SpringApplication.md)
     * [6.参数配置机制](spring/boot/06.参数配置机制.md)
     * [7.ConfigurationProperties](spring/boot/07.ConfigurationProperties.md)
+    * [8.日志输出](spring/boot/08.日志输出.md)
+    * [9.使用SpringMVC](spring/boot/09.使用SpringMVC.md)
+    * [10.使用Redis](spring/boot/10.使用Redis.md)
+    * [11.使用Spring Cache](spring/boot/11.使用Spring Cache.md)
+    * [12.使用MongoDB](spring/boot/12.使用MongoDB.md)
+    * [13.使用RestTemplate](spring/boot/13.使用RestTemplate.md)
+    * [14.使用WebClient](spring/boot/14.使用WebClient.md)
 * ehcache
   * [1.开启JMX支持](ehcache/01.开启JMX支持.md)
 * elasticJob
@@ -118,6 +127,17 @@
     * [30.通过包名创建JAXBContext](java/jaxb/21.通过包名创建JAXBContext.md)
     * [31.JAXB系列之schemagen](java/jaxb/22.JAXB系列之schemagen.md)
     * [32.JAXB系列之xjc生成Java文件](java/jaxb/23.JAXB系列之xjc生成Java文件.md)
+    * chat
+      * [1.JAXB初体验](java/jaxb/chat/01.JAXB初体验.md)
+      * [2.JAXB核心注解介绍](java/jaxb/chat/02.JAXB核心注解介绍.md)
+      * [3.JAXBContext介绍及性能优化](java/jaxb/chat/03.JAXBContext介绍及性能优化.md)
+      * [4.以子类的结构绑定XML](java/jaxb/chat/04.以子类的结构绑定XML.md)
+      * [5.处理动态元素或属性](java/jaxb/chat/05.处理动态元素或属性.md)
+      * [6.动态生成XML节点](java/jaxb/chat/06.动态生成XML节点.md)
+      * [7.监听器](java/jaxb/chat/07.监听器.md)
+      * [8.XML与Map相互转化](java/jaxb/chat/08.XML与Map相互转化.md)
+      * [9.JAVA与Schema相互转换](java/jaxb/chat/09.JAVA与Schema相互转换.md)
+      * [10.Java与XML映射利器](java/jaxb/chat/Java与XML映射利器.md)
 * mybatis
   * [1.推荐一款Mybatis分页插件](mybatis/推荐一款Mybatis分页插件.md)
   * [2.调用存储过程](mybatis/调用存储过程.md)
@@ -127,4 +147,5 @@
   * [1.基于大量数据的Excel生成方案](poi/基于大量数据的Excel生成方案.md)
 * servlet3
   * [1.通过ServletContainerInitializer注册Servlet对象](servlet3/01.通过ServletContainerInitializer注册Servlet对象.md)
+
 
