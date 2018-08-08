@@ -69,7 +69,7 @@
     * [1.初体验](spring/boot/01.初体验.md)
     * [2.maven plugin](spring/boot/02.maven plugin.md)
     * [3.自动配置](spring/boot/03.自动配置.md)
-    * [4.Spring Boot devtools](spring/boot/04.Spring Boot devtools.md)
+    * [4.创建自己的自动配置](spring/boot/04.创建自己的自动配置.md)
     * [5.SpringApplication](spring/boot/05.SpringApplication.md)
     * [6.参数配置机制](spring/boot/06.参数配置机制.md)
     * [7.ConfigurationProperties](spring/boot/07.ConfigurationProperties.md)
@@ -80,6 +80,12 @@
     * [12.使用MongoDB](spring/boot/12.使用MongoDB.md)
     * [13.使用RestTemplate](spring/boot/13.使用RestTemplate.md)
     * [14.使用WebClient](spring/boot/14.使用WebClient.md)
+    * [15.自动配置Validation](spring/boot/15.自动配置Validation.md)
+    * [16.使用DataSource](spring/boot/16.使用DataSource.md)
+    * [17.使用Spring Data JPA](spring/boot/17.使用Spring Data JPA.md)
+    * [18.使用Alibaba Druid DataSource](spring/boot/18.使用Alibaba Druid DataSource.md)
+    * [19.使用Mybatis](spring/boot/19.使用Mybatis.md)
+    * [20.Spring Boot devtools](spring/boot/20.Spring Boot devtools.md)
 * ehcache
   * [1.开启JMX支持](ehcache/01.开启JMX支持.md)
 * elasticJob
@@ -147,5 +153,3 @@
   * [1.基于大量数据的Excel生成方案](poi/基于大量数据的Excel生成方案.md)
 * servlet3
   * [1.通过ServletContainerInitializer注册Servlet对象](servlet3/01.通过ServletContainerInitializer注册Servlet对象.md)
-
-
