@@ -31,6 +31,8 @@
     * [29.Spring整合quartz](spring/bean/29.Spring整合quartz.md)
     * [30.Spring之RestTemplate介绍](spring/bean/30.Spring之RestTemplate介绍.md)
     * [31.Spring之WebClient介绍](spring/bean/31.Spring之WebClient介绍.md)
+    * [32.ImportSelector介绍](spring/bean/32.ImportSelector介绍.md)
+    * [33.ImportBeanDefinitionRegistrar介绍](spring/bean/33.ImportBeanDefinitionRegistrar介绍.md)
   * aop
     * [1.Aop简介](spring/aop/01.Aop简介.md)
     * [2.基于Aspectj注解的Spring Aop简单实现](spring/aop/02.基于Aspectj注解的Spring Aop简单实现.md)
@@ -86,6 +88,8 @@
     * [18.使用Alibaba Druid DataSource](spring/boot/18.使用Alibaba Druid DataSource.md)
     * [19.使用Mybatis](spring/boot/19.使用Mybatis.md)
     * [20.Spring Boot devtools](spring/boot/20.Spring Boot devtools.md)
+    * [21.Spring Boot提供的监控接口](spring/boot/21.Spring Boot提供的监控接口.md)
+    * [22.Maven filter问题](spring/boot/22.Maven filter问题.md)
 * ehcache
   * [1.开启JMX支持](ehcache/01.开启JMX支持.md)
 * elasticJob
