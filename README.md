@@ -87,7 +87,7 @@
     * [14.使用WebClient](spring/boot/14.使用WebClient.md)
     * [15.自动配置Validation](spring/boot/15.自动配置Validation.md)
     * [16.使用DataSource](spring/boot/16.使用DataSource.md)
-    * [17.使用Spring Data JPA](spring/boot/17.使用Spring%20Data JPA.md)
+    * [17.使用Spring Data JPA](spring/boot/17.使用Spring%20Data%20JPA.md)
     * [18.使用Alibaba Druid DataSource](spring/boot/18.使用Alibaba%20Druid%20DataSource.md)
     * [19.使用Mybatis](spring/boot/19.使用Mybatis.md)
     * [20.Spring Boot devtools](spring/boot/20.Spring%20Boot%20devtools.md)
