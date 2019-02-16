@@ -43,7 +43,7 @@
     * [4.基于Aspectj注解的Advice介绍](spring/aop/04.基于Aspectj注解的Advice介绍.md)
     * [5.给Advice传递参数](spring/aop/05.给Advice传递参数.md)
     * [6.@DeclareParents介绍](spring/aop/06.@DeclareParents介绍.md)
-    * [7.基于XML配置的Spring AOP简介](spring/aop/07.基于XML配置的Spring AOP简介.md)
+    * [7.基于XML配置的Spring AOP简介](spring/aop/07.基于XML配置的Spring%20AOP简介.md)
     * [8.advisor标签](spring/aop/08.advisor标签.md)
     * [9.基于正则表达式的Pointcut](spring/aop/09.基于正则表达式的Pointcut.md)
     * [10.编程式的Pointcut](spring/aop/10.编程式的Pointcut.md)
